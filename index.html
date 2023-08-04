@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/sidebar.css" />
+    <link rel="stylesheet" href="./css/welcome.css" />
+    <link rel="stylesheet" href="./css/todolist.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
+  </head>
+  <body>
+    <div id="root">
+      <div class="container">
+        <aside class="sidebar">
+          <button onclick="onSideOpen();" class="sidebar-toggle-button">
+            ▶
+          </button>
+          <h1 class="sidebar-logo">ToDo</h1>
+          <ul class="sidebar-menu-list">
+            <li
+              class="menu-item selected-menu"
+              onclick="sidebarMenuOnclick(this)"
+            >
+              시작하기
+            </li>
+            <li class="menu-item" onclick="sidebarMenuOnclick(this)">
+              TODO-LIST
+            </li>
+          </ul>
+        </aside>
+        <main class="main-container">
+          <div class="welcome-page-container">
+            <h1 class="welcome-page-title">TODO LIST</h1>
+            <button class="link-btn" onclick="goBtnOnclick()">Go</button>
+          </div>
+          <div class="todo-page-container invisible">
+            <header>
+              <div class="input-wrapper">
+                <input
+                  type="text"
+                  class="text-input"
+                  placeholder="할일을 추가해주세요. . ."
+                  onkeyup="addTodoOnchange(event)"
+                />
+              </div>
+              <div>
+                <button class="add-button w-f" onclick="addTodoBtnOnclick()">
+                  추가
+                </button>
+              </div>
+            </header>
+            <ul class="todolist-main-container"></ul>
+          </div>
+        </main>
+        <div class="modal invisible">
+          
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+    <script src="./js/utills.js"></script>
+    <script src="./js/sidebar.js"></script>
+    <script src="./js/routes.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/welcome.js"></script>
+    <script src="./js/todolist.js"></script>
+  </body>
+</html>
